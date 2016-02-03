@@ -1,6 +1,6 @@
 // ! ! !
 // Three bugs
-// Added the CSS reference
+// Rounded output format
 // Indexed into the array that is being passed into the calculateSTI function
 // Removed - 1 from basePercent variable in the getBaseSTI function
 
@@ -43,7 +43,7 @@ function calculateSTI(array1) {
   }
 
   newArray[1] = bonus;
-  newArray[2] = baseSalary * (1.0 + bonus);
+  newArray[2] = Math.round(baseSalary * (1.0 + bonus));
   newArray[3] = Math.round(baseSalary * bonus);
   console.log(newArray[0] + " " + newArray[1] + " " + newArray[2] + " " + newArray[3]);
   return newArray;
